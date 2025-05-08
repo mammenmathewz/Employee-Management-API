@@ -31,9 +31,8 @@ Before running this project, ensure you have the following installed:
 
 1.  **Clone the Repository:**
     ```bash
-    # If using git
-    # git clone <repository_url>
-    # cd <project_directory>
+    # git clone Employee-Management-API
+    # cd Employee-Management-API
     ```
     (Assuming you already have the code files in your local directory)
 
