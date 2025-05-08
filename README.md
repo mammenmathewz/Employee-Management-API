@@ -2,7 +2,7 @@
 
 ## Objective
 
-This project is a RESTful API built in Node.js using TypeScript, designed to manage employee records. It interacts with a SQL Server database, adhering to principles of Clean Architecture, Object-Oriented Programming (OOP), and Dependency Injection (DI).
+This project is a RESTful API built in Node.js using TypeScript, designed for managing employee records. It interacts with an **Azure SQL Database** instance. The application is structured following **Clean Architecture** principles, emphasizing **Object-Oriented Programming (OOP)**, **Dependency Injection (DI)**, and adherence to **SOLID principles** for maintainable and scalable code.
 
 ## Features
 
