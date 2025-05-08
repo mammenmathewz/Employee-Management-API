@@ -176,5 +176,3 @@ The project follows a basic **Clean Architecture** pattern:
 
 * **Authentication/Authorization:** The `createdBy`, `updatedBy`, and `deletedBy` fields are currently taken directly from the request body. In a production application, this information should be securely obtained from an authentication and authorization system.
 * **Audit Trigger Detail:** The provided SQL trigger `trg_AuditLogs` on DELETE operations logs the `CreatedBy` from the `deleted` row in the `AuditLogs` table. This means the audit log records who originally created the employee, not the user who performed the delete via the API/stored procedure. Adjust the trigger/SP if you need to log the actual deleter.
-
-This README should provide a good overview and guide for anyone wanting to understand and run your project. Congratulations on completing the task!
