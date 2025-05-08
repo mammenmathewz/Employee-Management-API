@@ -1,4 +1,4 @@
-// src/infrastructure/repositories/EmployeeRepository.ts
+
 import { IEmployeeRepository } from '../../interface/IEmployeeRepository';
 import { Employee } from '../../core/entities/Employee';
 import { connectDB } from '../database/db';
@@ -8,7 +8,6 @@ import sql from 'mssql';
 export class EmployeeRepository implements IEmployeeRepository {
 
     async create(employee: Employee, createdBy: string): Promise<Employee> {
-        // Get the connection pool instance
         const pool = await connectDB();
         try {
             const request = pool.request();
@@ -19,9 +18,6 @@ export class EmployeeRepository implements IEmployeeRepository {
 
             await request.execute('CreateEmployee');
 
-            // After inserting, query to get the created employee with its database-assigned ID
-            // This assumes Name, Position, and Salary combination is reasonably unique recently,
-            // or your stored procedure returns the ID upon insertion (preferred method).
              const result = await pool.request()
                 .input('Name', sql.NVarChar(100), employee.name)
                 .input('Position', sql.NVarChar(100), employee.position)

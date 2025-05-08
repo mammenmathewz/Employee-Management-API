@@ -49,17 +49,4 @@ export const connectDB = async (): Promise<ConnectionPool> => {
     }
 };
 
-/**
- * Closes the database connection pool if it exists and is connected.
- */
-export const closeDB = async (): Promise<void> => {
-    if (pool && pool.connected) {
-        try {
-            await pool.close();
-            pool = null;
-            console.log('Database connection pool closed.');
-        } catch (err) {
-            console.error('Error closing database connection pool:', err);
-        }
-    }
-};
+
