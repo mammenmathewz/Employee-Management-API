@@ -9,7 +9,7 @@ This project is a RESTful API built in Node.js using TypeScript, designed for ma
 The API provides the following functionality:
 
 * **CRUD Operations:** Create, Read, Update, and Delete employee records.
-* **Database Interaction:** Utilizes SQL Server as the persistent storage.
+* **Database Interaction:** Utilizes **Azure SQL Database** as the persistent storage.
 * **Stored Procedures:** All database interactions for CRUD operations are performed via stored procedures.
 * **Automatic Audit Logging:** Data changes on the `Employees` table are automatically logged to an `AuditLogs` table using database triggers.
 * **Salary Range Search:** Allows fetching employees based on a specified salary range.
